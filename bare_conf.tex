@@ -243,8 +243,11 @@ u & \text{if } u>0,\\
 0 & \text{otherwise.}
 \end{array}\right.
 \end{equation}
-A complex cell sums up the output of the simple cells in its receptive field, 
-weighted with a Gaussian function,
+
+Complex cells are commonly thought as the squared summation 
+of simple cells in phase quadrature \cite{fleet1996}.
+In our model, complex cells are simplified as a linear summation 
+of simple cells in different positions, weighted with a Gaussian function,
 \begin{equation}
 f_{\sigma_c}(x,y)=\frac{1}{2\pi\sigma_c}\exp\left(-\frac{x^2+y^2}{2\sigma_c^2}\right),
 \end{equation}
