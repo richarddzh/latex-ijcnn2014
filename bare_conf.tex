@@ -210,14 +210,21 @@ In the equation, $\theta$ represents the preferred orientation,
 $\sigma_s$ approximates the radius of the receptive fields,
 and $\lambda$ is the wavelength of the sinusoidal factor.
 $\lambda$ controls the spatial frequency of the filter.
-In this paper, it is taken according to the scale of the filter
+It is twice the width of the central excitatory sub-region of the receptive field
+(\figurename~\ref{fig:4b}).
+In this paper, it is taken according to the size of the simple receptive field.
 ($\lambda=1.3\sigma_s$).
+We can have different Gabor functions by changing the phase offset of the sinusoidal factor.
+\figurename~\ref{fig:4} shows two typical cases.
+They are equivalent with respect to extracting the orientation of edges.
+Equation \ref{equ:gabor} produces an even function (\figurename\ref{fig:4b}),
+which was used in this paper.
 
 \begin{figure}[htp]
 \centering
-\subfloat[Odd symmetry]{\includegraphics[width=0.45\linewidth]{images/fig4a.eps}\label{fig:4a}}\hfil
-\subfloat[Even symmetry]{\includegraphics[width=0.45\linewidth]{images/fig4b.eps}\label{fig:4b}}
-\caption{Different Gabor functions.}
+\subfloat[Odd symmetry]{\includegraphics[width=0.3\linewidth]{images/fig4a.eps}\label{fig:4a}}\hfil
+\subfloat[Even symmetry]{\includegraphics[width=0.3\linewidth]{images/fig4b.eps}\label{fig:4b}}
+\caption{Gabor functions with different phases.}
 \label{fig:4}
 \end{figure}
 
