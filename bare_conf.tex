@@ -77,7 +77,7 @@ As an intermediate stage, V4 plays a crucial role in transforming low-level orie
 into complex object representations.
 
 \begin{figure}[htp]
-\centerline{\includegraphics[width=0.8\linewidth]{images/fig1.png}} 
+\centerline{\includegraphics[width=0.7\linewidth]{images/fig1.png}} 
 \caption{V4 is an intermediate stage in visual recognition.}
 \label{fig:1}
 \end{figure}
@@ -122,9 +122,9 @@ activate the neuron.
 
 \begin{figure}[htp]
 \centering
-\subfloat[]{\includegraphics[width=0.18\linewidth]{images/fig2a.png}\label{fig:2a}}\hfil
-\subfloat[]{\includegraphics[width=0.36\linewidth]{images/fig2b.png}\label{fig:2b}}\hfil
-\subfloat[]{\includegraphics[width=0.36\linewidth]{images/fig2c.png}\label{fig:2c}}
+\subfloat[]{\includegraphics[width=0.17\linewidth]{images/fig2a.png}\label{fig:2a}}\hfil
+\subfloat[]{\includegraphics[width=0.34\linewidth]{images/fig2b.png}\label{fig:2b}}\hfil
+\subfloat[]{\includegraphics[width=0.34\linewidth]{images/fig2c.png}\label{fig:2c}}
 \caption{Shapes to examine V4 selectivity.
 (a) Classical gratings.
 (b) Non-Cartesian gratings. V4 neurons prefer non-Cartesian gratings rather than classical gratings.
@@ -172,7 +172,7 @@ Our model employs a similar hierarchical structure.
 \figurename~\ref{fig:3} shows the architecture of our model.
 
 \begin{figure}[htp]
-\centerline{\includegraphics[width=0.99\linewidth]{images/fig3.pdf}} 
+\centerline{\includegraphics[width=0.95\linewidth]{images/fig3.pdf}} 
 \caption{Multilayer neural network model of V4.}
 \label{fig:3}
 \end{figure}
@@ -222,8 +222,8 @@ which was used in this paper.
 
 \begin{figure}[htp]
 \centering
-\subfloat[Odd symmetry]{\includegraphics[width=0.3\linewidth]{images/fig4a.eps}\label{fig:4a}}\hfil
-\subfloat[Even symmetry]{\includegraphics[width=0.3\linewidth]{images/fig4b.eps}\label{fig:4b}}
+\subfloat[Odd symmetry]{\includegraphics[width=0.28\linewidth]{images/fig4a.eps}\label{fig:4a}}\hfil
+\subfloat[Even symmetry]{\includegraphics[width=0.28\linewidth]{images/fig4b.eps}\label{fig:4b}}
 \caption{Gabor functions with different phases.}
 \label{fig:4}
 \end{figure}
@@ -441,6 +441,14 @@ to serve as the input of RMB encoders.
 The saliency filters took a threshold $t_E=2.8$ for the entropy
 and a threshold $t_A=0.4$ for complex cell output value (or complex cell activity).
 These values were roughly the median values of natural images.
+
+With the above set of model parameters,
+the execution time to extract RBM encoded salient features from a single gray-scale image
+is linear to the number of pixels in the image and the size of the receptive field.
+The time complexity is $\mathrm{O}(n\sigma_s^2)$, where $n$ is the number of pixels.
+Processing an image with 150,000 pixels at the scale $\sigma_s=4$ requires 1.0 second
+with MATLAB 2011 on the author's computer (Intel Core i5 with 4GB RAM).
+Due to limited space, we do not provide detailed analysis of the execution time of RBM training here.  
 
 \section{Experiments}
 \label{sec:4}
