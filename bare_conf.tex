@@ -383,9 +383,11 @@ In each learning iteration, the change in the weight is given by
 \Delta w_{ij}=\epsilon\left(\langle v_i h_j\rangle_\text{data}-\langle v_i h_j\rangle_\text{recon}\right),
 \end{equation}
 where $\epsilon$ is a learning rate, 
-$\langle v_i h_j\rangle_\text{data}$ is the product of two units when the visible layer is given real data,
+$\langle v_i h_j\rangle_\text{data}$ is the product of two units 
+when the visible layer is given the data,
 and $\langle v_i h_j\rangle_\text{recon}$ is the product of two units 
-when the visible layer is given reconstructed data.
+when the visible layer is given the reconstruction 
+(\cite{hinton2002} for details on training RBM).
 
 We use weight-decay \cite{hinton2010}
 to reduce overfitting by adding an L2 penalty term, $\frac{1}{2}\lambda w^2$.
