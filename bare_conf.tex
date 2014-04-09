@@ -437,7 +437,7 @@ For gray scale images, we used 18 orientations (from $0^\circ$ to $170^\circ$ in
 in order to preserve more information.
 
 The output of complex cells was normalized to the $[0,1]$ interval
-to serve as the input of RMB encoders.
+to serve as the input of RBM encoders.
 The saliency filters took a threshold $t_E=2.8$ for the entropy
 and a threshold $t_A=0.4$ for complex cell output value (or complex cell activity).
 These values were roughly the median values of natural images.
@@ -700,7 +700,7 @@ at the scale of 4, 8, and 16 in terms of simple cell radius.}
 \end{figure}
 
 \figurename~\ref{fig:12} shows the process of feature detection with the saliency filters in our model.
-\figurename~\ref{fig:12b} and \figurename~\ref{fig:12d} show the activity map of complex cells.
+\figurename~\ref{fig:12b} and \figurename~\ref{fig:12e} show the activity map of complex cells.
 The activities are high in the region of the trees behind the car (\figurename~\ref{fig:12a})
 and the handwriting on the white board (\figurename~\ref{fig:12c}).
 Saliency filters filter out these regions because these regions have a comparatively high entropy.
